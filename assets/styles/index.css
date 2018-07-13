@@ -1,5 +1,8 @@
+---
+---
+
 body {
-    background-image: url(/assets/images/Melamine-wood-002.png)
+    background-image: url({{ site.url }}/assets/images/Melamine-wood-002.png)
 }
 
 h1 {
