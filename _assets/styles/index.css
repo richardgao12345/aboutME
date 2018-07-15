@@ -1,0 +1,31 @@
+body {
+    background-image: url('/_assets/images/Melamine-wood-002.png')
+}
+
+h1 {
+    text-align: center;
+    top: 40%;
+    width: 50%;
+    font: Courier;
+    font-size: 70px;
+    position: absolute;
+    color: rgb(204, 194, 194);
+}
+
+.box {
+    border: 12px solid #FEFEFE;
+    border-radius: 10px;
+    margin-top: 15px;
+    right: 50px;
+    margin-bottom: 15px;
+}
+
+.box-container {
+    top: 85px;
+    left: 50px;
+    width: 40%
+}
+
+.gridding {
+    display: grid;
+}
