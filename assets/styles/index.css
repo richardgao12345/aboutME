@@ -7,12 +7,21 @@ body {
 
 h1 {
     text-align: center;
-    top: 40%;
-    width: 50%;
+    top: 20%;
+    width: 40%;
     font: Courier;
-    font-size: 70px;
     position: absolute;
+    font-size: 70px;
     color: rgb(204, 194, 194);
+}
+h2 {
+    text-align: center;
+    top: 30%;
+    width: 40%;
+    font: Courier;
+    position: absolute;
+    font-size: 15px;
+    color: rgb(211, 197, 197);
 }
 
 .box {
@@ -22,47 +31,19 @@ h1 {
     border: 8px solid #FEFEFE;
     background-color: black;
     border-radius: 5px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.box-container {
-    display: grid;
-    top: 85px;
-    left: 50px;
-    width: 40%;
-    float: right;
-    margin-right: 100px;
-    grid-template-columns: 200px 200px;
+    margin: 5px;
 }
 
 .container {
+    position: absolute;
     float: right;
-    width: 35%;
-    margin-right: 250px;
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 250px 250px;
-    grid-template-rows: 225px 225px 225px 200px 200px 200px;
-    grid-gap: 23px;
-    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    top: 50%;
+    width: 50%;
+    left: 25%;
+    height: 25%;
 }
 
-.port {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 100%
-}
 
-.person {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
 
-}
-
-.prayer {
-    grid-row-start: 3;
-    grid-row-end: 4;
-
-}
