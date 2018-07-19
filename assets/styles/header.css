@@ -1,5 +1,17 @@
+---
+---
+
 .navcontainer {
     display: flex;
     width: 100%;
     flex-direction: horizontal;
+    position: fixed;
+    background-image: url({{ site.url }}/assets/images/Melamine-wood-002.png);
+    height: 10%;
+}
+
+.Home {
+    color: gray;
+    text-align: center;
+    left: 50%;
 }
