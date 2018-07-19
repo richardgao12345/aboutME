@@ -29,6 +29,7 @@ h2 {
     align-items: center;
     justify-content: center;
     border: 8px solid #FEFEFE;
+    color: white;
     background-color: black;
     border-radius: 5px;
     margin: 5px;
@@ -40,10 +41,45 @@ h2 {
     display: flex;
     flex-direction: row;
     top: 50%;
-    width: 50%;
-    left: 25%;
-    height: 25%;
+    width: 45%;
+    left: 30%;
+    height: 22.5%;
 }
 
+.port {
+    flex-grow: 1;
+    height: 100%;
+    transition: 1s;
+}
 
+.port:hover {
+    transition: 1s;
+    flex-grow: 2;
+    height: 125%;
 
+}
+
+.person {
+    flex-grow: 1;
+    height: 100%;
+    transition: 1s;
+}
+
+.person:hover {
+    transition: 1s;
+    flex-grow: 2;
+    height: 125%;
+}
+
+.prayer {
+    flex-grow: 1;
+    height: 100%;
+    transition: 1s;
+}
+
+.prayer:hover {
+    transition: 1s;
+    flex-grow: 2;
+    height: 125%;
+
+}
