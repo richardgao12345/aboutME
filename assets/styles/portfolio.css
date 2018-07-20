@@ -1,10 +1,24 @@
 .boxContainers {
     display: flex;
+    flex-direction: horizontal;
     justify-content: center;
-    background-color: blue;
+    background-color: black;
 }
 
-.expandBox {
+.box {
     margin: 10px;
-    border: 10px solid white;
+    border: 8px solid #FEFEFE;
+    width: 300px;
+    color: white;
+}
+
+.modalInfo {
+    opacity: 0;
+    transition: 1s;
+    height: 0;
+    width: 0;
+}
+
+.growing {
+    
 }
