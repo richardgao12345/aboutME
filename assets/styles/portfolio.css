@@ -2,14 +2,15 @@
     display: flex;
     flex-direction: horizontal;
     justify-content: center;
-    background-color: black;
 }
 
 .box {
     margin: 10px;
-    border: 8px solid #FEFEFE;
+    border: 8px solid blue;
     width: 300px;
-    color: white;
+    color: black;
+    transition: 1s;
+    background-color: gray;
 }
 
 .box .modalInfo {
@@ -29,7 +30,8 @@
     height: 100vh;
 	z-index: 100;
 	margin: 0;
-	border-radius: 0;
+    border-radius: 0;
+    background-color: gray
 }
 
 .box.full-screen .modalInfo {
@@ -38,4 +40,5 @@
     margin: inital;
     transition-delay: 0.5s;
     opacity: 1;
+    color: blue;
 }

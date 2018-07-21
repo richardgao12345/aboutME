@@ -26,7 +26,6 @@ var expandBox = function(event) {
 		width: window.getComputedStyle(currentModal).width,
 		height: window.getComputedStyle(currentModal).height
     }
-    console.log(size)
     position = currentModal.getBoundingClientRect()
 	fullModal.style.top = position.top + 'px';
 	fullModal.style.left = position.left + 'px';
