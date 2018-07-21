@@ -12,13 +12,30 @@
     color: white;
 }
 
-.modalInfo {
+.box .modalInfo {
     opacity: 0;
     transition: 1s;
     height: 0;
     width: 0;
 }
 
-.growing {
-    
+.box.growing .modalInfo{
+    height: auto;
+    margin: 0;
+    opacity: 0;
+    transition-delay: 0.5s;
+}
+.box.full-screen {
+    height: 100vh;
+	z-index: 100;
+	margin: 0;
+	border-radius: 0;
+}
+
+.box.full-screen .modalInfo {
+    height: auto;
+	width: auto;
+    margin: inital;
+    transition-delay: 0.5s;
+    opacity: 1;
 }
