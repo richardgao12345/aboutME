@@ -34,7 +34,6 @@ var expandBox = function(event) {
     fullModal.style.margin = currentModal.style.margin;
     
     setTimeout(function(){
-        console.l
 		fullModal.innerHTML = currentModal.innerHTML;
 		var classes = currentModal.classList.value.split(' ');
 		for (var i = 0; i < classes.length; i++) {
@@ -42,12 +41,12 @@ var expandBox = function(event) {
         }
         fullModal.style.position = "absolute";
 		fullModal.classList.add('growing');
-		fullModal.style.height = '100vh';
-		fullModal.style.width = '100vw';
-		fullModal.style.top = '0';
-		fullModal.style.left = '0';
+		fullModal.style.height = '80vh';
+		fullModal.style.width = '80vw';
+		fullModal.style.top = '0%';
+		fullModal.style.left = '10%';
         fullModal.style.margin = '0';
-        console.log(fullModal)
+        fullModal.style.textAlign = 'center';
     }, 1);
     setTimeout(function(){
 		fullModal.classList.remove('growing');
