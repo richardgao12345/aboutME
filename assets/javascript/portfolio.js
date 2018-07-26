@@ -54,6 +54,7 @@ var expandBox = function(event) {
 	}, 1000);
     
 }
+
 for (var i = 0; i < modals.length; i++) {
-    modals[i].addEventListener("click", expandBox)
+    modals[i].addEventListener("click", expandBox)  
 }
