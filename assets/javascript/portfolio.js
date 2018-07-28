@@ -7,7 +7,6 @@ fullModal.style.position = "absolute";
 var position = {}
 var size = {}
 var curModal = -1;
-
 //javascript function to expand the box
 var expandBox = function(event) {
     var currentModal = event.currentTarget;
@@ -50,9 +49,10 @@ var expandBox = function(event) {
     }, 1);
     setTimeout(function(){
 		fullModal.classList.remove('growing');
-        fullModal.classList.add('full-screen')
-        $('#grayout').fadeIn()
-	}, 1000);
+        fullModal.classList.add('full-screen');
+    }, 1000);
+    $('#grayout').fadeIn(800);
+
     
 }
 
@@ -76,8 +76,8 @@ var closeBox = function(event) {
 			 classList.remove(classList.item(0));
 		}
         $this.style = '';
-        $('#grayout').fadeOut()
-	}, 1000);
+    }, 1000);
+    $('#grayout').fadeOut(800);
 }
 
 function linkClick(someID) {
