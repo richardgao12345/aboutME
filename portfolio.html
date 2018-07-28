@@ -9,17 +9,16 @@
         <link rel="stylesheet" href="{{ site.url }}/assets/styles/portfolio.css">
     </head>
     <body>
-        <h3 class="header"> Portfolio
+        <h2 class="header"> Portfolio
             <div class="links">
-                <a href="https://github.com/richardgao12345" title="Github"><img src="{{ site.url }}/assets/images/githublogo.png"></a>
-                <a href="https://www.linkedin.com/in/richard-gao12345" title="Linkedin"><img src="{{ site.url }}/assets/images/linkedinlogo.png"></a>
-                <a href="mailto:rtrgao@ucdavis.edu" title="Email Me!"><img src="{{ site.url }}/assets/images/maillogo.png"></a>
+                    <img src="{{ site.url }}/assets/images/githublogo.png" id="github" onClick="linkClick(this.id)">
+                    <img src="{{ site.url }}/assets/images/linkedinlogo.png" id="linkedin" onClick="linkClick(this.id)">
+                    <img src="{{ site.url }}/assets/images/maillogo.png" id="mail" onClick="linkClick(this.id)">
             </div>
-            </div>
-        </h3>
+        </h2>
 
         <div class="boxContainers">
-            <div class="box education" onclick="expandBox">Education
+            <div class="box education" onclick="expandBox"> -EDUCATION-
                 <div class="modalInfo">
                     <div>  School: University of California, Davis
                             Graduation Date: 06/16/2018,
@@ -49,14 +48,14 @@
 
                 </div>
             </div>
-            <div class="box projects">Projects and Skills
+            <div class="box projects">-Projects and Skills-
                 <div class="modalInfo"> Modal Information
                     <div class="proj">
                         Project1
                     </div>
                 </div>
             </div>
-            <div class="box experience">Experience
+            <div class="box experience">-Experience-
                 <div class="modalInfo">
                     <div class="intern"> 
                         SAP
