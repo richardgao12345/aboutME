@@ -51,6 +51,7 @@ var expandBox = function(event) {
     setTimeout(function(){
 		fullModal.classList.remove('growing');
         fullModal.classList.add('full-screen')
+        $('#grayout').fadeIn()
 	}, 1000);
     
 }
@@ -74,7 +75,8 @@ var closeBox = function(event) {
 		while (classList.length > 0) {
 			 classList.remove(classList.item(0));
 		}
-		$this.style = '';;
+        $this.style = '';
+        $('#grayout').fadeOut()
 	}, 1000);
 }
 

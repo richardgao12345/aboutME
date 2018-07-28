@@ -76,6 +76,7 @@ h2#div {
     visibility: visible;
     opacity: 1;
     color: blue;
+    z-index: 3;
 }
 .links {
     display: block;
@@ -92,3 +93,14 @@ img {
     padding: 30px;
     position: absolute;
 }
+
+#grayout {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+ }
