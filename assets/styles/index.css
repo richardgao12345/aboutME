@@ -1,57 +1,41 @@
 ---
 ---
 
-body {
-    background-image: url({{ site.url }}/assets/images/Melamine-wood-002.png)
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.container {
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
+    margin-top: 20%;
     text-align: center;
-    top: 20%;
-    width: 40%;
-    font: Courier;
-    position: absolute;
-    font-size: 70px;
-    color: rgb(204, 194, 194);
+    font-family: 'Roboto', mono;
+    font-size: 100px;
 }
-h2 {
+
+.subtext {
+    margin: 0 auto;
     text-align: center;
-    top: 30%;
-    width: 40%;
-    font: Courier;
-    position: absolute;
-    font-size: 15px;
-    color: rgb(211, 197, 197);
+    font-family: 'Roboto', mono;
+    font-size: 20px;
+    opacity: 0.3;
 }
 
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 8px solid #FEFEFE;
-    color: white;
-    background-color: black;
-    border-radius: 5px;
-    margin: 5px;
-    flex-grow: 1;
-    height: 100%;
-    transition: 1.5s;
+span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto', mono;
+    font-size: 20px;
+    opacity: 0.3;
 }
 
-.box:hover {
-    transition: 1s;
-    flex-grow: 2;
-    height: 125%;
-
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
 }
-
-.container {
-    position: absolute;
-    float: right;
-    display: flex;
-    flex-direction: row;
-    top: 50%;
-    width: 45%;
-    left: 30%;
-    height: 22.5%;
-}
+  

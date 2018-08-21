@@ -1,24 +1,44 @@
-// //just testing this out
-// $(document).ready(function(){
-//     $('.port').mouseenter( function(){
-//         $(this).stop().animate({
-//            height: "120%"
-//         }, 'fast');
-//     });
-//     $('.port').mouseleave( function(){
-//         $(this).stop().animate({
-//            height: "100%"
-//         }, 'fast');
-//     });
-
-// });
-// $(document).ready(function(){
-//     $('.port').hover( function(){
-//         $(this).parent().css("grid-template-columns", "400px 100px");
-//         $(this).parent().css("grid-template-rows", "400px 100px 100px 100px 100px 100px");
-//         }, function(){
-//         $(this).parent().css("grid-template-columns", "250px 250px");
-//         $(this).parent().css("grid-template-rows", "225px 225px 225px 200px 200px 200px");
-//     });
-
-// });
+document.addEventListener('DOMContentLoaded',function(event){
+    // array with texts to type in typewriter
+    var dataText = [ "Christian. Computer Scientist. Sometimes down.", 
+    "No Reserves. No Retreats. No Regrets.",
+    "Definitely not a designer."];
+    
+    // type one text in the typwriter
+    // keeps calling itself until the text is finished
+    function typeWriter(text, i, fnCallback) {
+      // chekc if text isn't finished yet
+      if (i < (text.length)) {
+        // add next character to h1
+       document.querySelector("sub").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+  
+        // wait for a while and call this function again for next character
+        setTimeout(function() {
+          typeWriter(text, i + 1, fnCallback)
+        }, 100);
+      }
+      // text finished, call callback if there is a callback function
+      else if (typeof fnCallback == 'function') {
+        // call callback after timeout
+        setTimeout(fnCallback, 700);
+      }
+    }
+    // start a typewriter animation for a text in the dataText array
+     function StartTextAnimation(i) {
+       if (typeof dataText[i] == 'undefined'){
+          setTimeout(function() {
+            StartTextAnimation(0);
+          }, 20000);
+       }
+       // check if dataText[i] exists
+      if (i < dataText[i].length) {
+        // text exists! start typewriter animation
+        typeWriter(dataText[i], 0, function(){
+         // after callback (and whole text has been animated), start next text
+        StartTextAnimation(i + 1);
+       });
+      }
+    }
+    // start the text animation
+    StartTextAnimation(0);
+});
