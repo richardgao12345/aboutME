@@ -1,7 +1,8 @@
-body {
-    background: linear-gradient(to right,rgb(0, 195, 255), rgb(46, 146, 129));
+---
+---
 
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 h2 {
     text-align: center;
     top: 20%;
@@ -23,61 +24,6 @@ h2#div {
     box-sizing: content-box;
 }
 
-
-.box {
-    margin: 10px;
-    border: 8px solid blue;
-    width: 300px;
-    color: black;
-    transition: 1s; 
-    text-align: center;
-    border-radius: 5px;
-}
-
-.box .modalInfo {
-    height: 0;
-    width: 0;
-    margin: 0;
-    text-align: center;
-    transition: 1s;
-    overflow: hidden;
-    visibility: none;
-}
-
-.box.growing .modalInfo{
-    height: auto;
-    margin: 0;
-    opacity: 0;
-    transition-delay: 0.5s;
-    text-align: center !important;
-}
-.box.full-screen {
-    height: 80vh;
-    z-index: 100;
-    text-align: center;
-	margin: 0;
-    border-radius: 0;
-    background-color: gray;
-}
-
-.box.shrinking .modalInfo{
-    transition-delay: 0s;
-    transition: 0.5s;
-    opacity: 0;
-    display: block;
-}
-
-.box.full-screen .modalInfo {
-    text-align: center;
-    height: auto;
-	width: auto;
-    margin: inital;
-    transition-delay: 0.5s;
-    visibility: visible;
-    opacity: 1;
-    color: blue;
-    z-index: 3;
-}
 .links {
     display: block;
 }
@@ -85,23 +31,3 @@ h2#div {
 img {
     cursor: pointer;
 }
-
-.education {
-    top: 40%;
-    width: 20%;
-    left: 50%;
-    padding: 30px;
-    position: absolute;
-}
-
-#grayout {
-    display: none;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 2;
- }

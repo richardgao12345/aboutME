@@ -55,7 +55,7 @@ span {
     background-clip: text;
     text-decoration: underline;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     background-image: linear-gradient(to right, #d7a150, #d7a150 50%, #283271 50%);
 	background-size: 200% 100%;
     background-position: 100%;
