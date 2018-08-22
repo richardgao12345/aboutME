@@ -6,6 +6,7 @@
 .container {
     width: 100%;
     height: 100%;
+    margin-bottom: 8%;
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
     font-size: 100px;
 }
 
-.subtext {
+#sub {
     margin: 0 auto;
     text-align: center;
     font-family: 'Roboto', mono;
@@ -28,8 +29,6 @@ span {
     animation: caret 1s steps(1) infinite;
     margin: 0 auto;
     text-align: center;
-    font-family: 'Roboto', mono;
-    font-size: 20px;
     opacity: 0.3;
 }
 
@@ -37,5 +36,39 @@ span {
     50% {
       border-color: transparent;
     }
+}
+
+.flex-contain {
+    position: relative;
+    top: 30%;
+    display: flex;
+    flex-direction: vertical;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.box {
+    text-align: center;
+    font-family: 'Roboto', mono;
+    font-size: 40px;
+    margin: 5%;
+    background-clip: text;
+    text-decoration: underline;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #d7a150, #d7a150 50%, #283271 50%);
+	background-size: 200% 100%;
+    background-position: 100%;
+    transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1); /* vendorless fallback */
+    -o-transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1); /* opera */
+    -ms-transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1); /* IE 10 */
+    -moz-transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1); /* Firefox */
+    -webkit-transition: all 0.5s cubic-bezier(0.000, 0.000, 0.230, 1); /*safari and chrome */
+    
+}
+
+.box:hover {
+    background-position: 0%;
+    cursor: pointer;
 }
   
