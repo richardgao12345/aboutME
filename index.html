@@ -10,8 +10,10 @@
         <link rel="stylesheet" href="{{ site.url }}/assets/styles/index.css">
     </head>
     <body>
+        <canvas id="myCanvas"></canvas>
+        <img src="{{site.url}}/assets/images/iconmonstr-cube-1.svg" id="cube">
         <div class="container">
-            <h1>[ R  I  C  H  A  R  D  &ensp; G  A  O ]</h1>
+            <h1>[ R  I  C  H  A  R  D   &ensp; G  A  O ]</h1>
             <div class="subtext" id="sub">
 
             </div>
@@ -33,7 +35,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.4/rgbcolor.min.js"></script>
+        <!-- Optional if you want blur -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stackblur-canvas/1.4.1/stackblur.min.js"></script>
+        <!-- Main canvg code -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
         <script src="{{ site.url }}/assets/javascript/main.js"></script>
+        <script type="text/javascript" src="{{ site.url }}/assets/javascript/cube.js"></script>
 
     </body>
 </html>
