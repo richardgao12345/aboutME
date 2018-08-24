@@ -1,25 +1,22 @@
 
 	// Setup directly from canvas id:
 var canvas = document.getElementById("myCanvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth + 100;
+canvas.height = window.innerHeight + 200;
 ctx = canvas.getContext('2d');
-canvas.addEventListener("mousemove", mouseMove, false)
-canvas.addEventListener("mouseleave", mouseLeave, false)
-canvas.addEventListener("mouseenter", mouseEnter, false)
-
-function mouseMove(event) {
-
-}
-function mouseLeave() {
-
-}
-function mouseEnter() {
-
-}
+document.addEventListener("mousemove", mouseMove, false)
+document.addEventListener("mouseleave", mouseLeave, false)
+document.addEventListener("mouseenter", mouseEnter, false)
+window.addEventListener('resize', resizeCanvas, false);
+var cubeX = 80;
+var cubeY = 110;
 var mousePositionx;
 var mousePositiony;
-var inCanvas = false;
+var inCanvas = true;
+var xVelocity = 0.1;
+var yVelocity = 0.1;
+var speed = 2.5
+var angle = 45
 
 cubeX = 80;
 cubeY = 110;
@@ -27,6 +24,40 @@ cubeWidth = 50;
 cubeHeight = 50;
 cubeLength = 50;
 color = '#ff8d4b';
+function resizeCanvas() {
+    canvas.width = window.innerWidth + 100;
+    canvas.height = window.innerHeight + 200;
+}
+
+function mouseMove(event) {
+    mousePositionx = event.x
+    mousePositiony = event.y
+}
+function mouseLeave() {
+    inCanvas = false;
+}
+function mouseEnter() {
+    inCanvas = true;
+}
+function calculateLocation() {
+    if (inCanvas == true) {
+        var dx = mousePositionx - cubeX;
+        var dy = mousePositiony - cubeY;
+    }
+    else {
+        var dx = 80 - cubeX;
+        var dy = 110 - cubeY;
+    }
+    if ((dx > 10 || dy > 10) || (dx < -10 || dy < -10)) {
+        angle = Math.atan2(dy,dx);
+        xVelocity = Math.cos(angle) * speed;
+        yVelocity = Math.sin(angle) * speed;
+        cubeX += xVelocity;
+        cubeY += yVelocity;
+    }
+
+}
+
 function drawCube(x, y, wx, wy, h, color) {
     ctx.beginPath();
     ctx.moveTo(x, y);
@@ -78,6 +109,7 @@ function draw(){
   
   // Wobble the cube using a sine wave
   var wobble = Math.sin(Date.now()/250)*window.innerHeight/50;
+  calculateLocation();
   
   // draw the cube
   drawCube(
@@ -91,18 +123,3 @@ function draw(){
   requestAnimationFrame(draw);
 }
 draw();
-
-
-
-// var xVelocity = 0.1;
-// var yVelocity = 0.1;
-// var speed = 2;
-// var angle = 45;
-// var mousePosition = getMousePosition()
-// var dx = mousePosition.x - cube.x;
-// var dy = mousePosition.y - cube.y;
-// angle = Math.atan2(dy,dx);
-// xVelocity = Math.cos(angle) * speed;
-// yVelocity = Math.sin(angle) * speed;
-// cube.x += xVelocity;
-// cube.y += yVelocity;
