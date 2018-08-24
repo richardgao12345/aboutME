@@ -4,15 +4,28 @@ var canvas = document.getElementById("myCanvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ctx = canvas.getContext('2d');
-canvas.addEventListener('mousemove', function(evt) {
-    var mousePos = getMousePos(canvas, evt);
-    var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-    writeMessage(canvas, message);
-}, false);
+canvas.addEventListener("mousemove", mouseMove, false)
+canvas.addEventListener("mouseleave", mouseLeave, false)
+canvas.addEventListener("mouseenter", mouseEnter, false)
 
-x1 = 50;
-x2 = 50;
-y = 50;
+function mouseMove(event) {
+
+}
+function mouseLeave() {
+
+}
+function mouseEnter() {
+
+}
+var mousePositionx;
+var mousePositiony;
+var inCanvas = false;
+
+cubeX = 80;
+cubeY = 110;
+cubeWidth = 50;
+cubeHeight = 50;
+cubeLength = 50;
 color = '#ff8d4b';
 function drawCube(x, y, wx, wy, h, color) {
     ctx.beginPath();
@@ -68,11 +81,11 @@ function draw(){
   
   // draw the cube
   drawCube(
-    80,
-    110 + wobble,
-    Number(x1),
-    Number(x2),
-    Number(y),
+    cubeX,
+    cubeY + wobble,
+    Number(cubeWidth),
+    Number(cubeHeight),
+    Number(cubeLength),
     color
   );
   requestAnimationFrame(draw);
