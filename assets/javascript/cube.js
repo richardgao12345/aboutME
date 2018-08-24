@@ -1,8 +1,8 @@
 
 	// Setup directly from canvas id:
 var canvas = document.getElementById("myCanvas");
-canvas.width = window.innerWidth + 100;
-canvas.height = window.innerHeight + 200;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 ctx = canvas.getContext('2d');
 document.addEventListener("mousemove", mouseMove, false)
 document.addEventListener("mouseleave", mouseLeave, false)
@@ -25,8 +25,8 @@ cubeHeight = 50;
 cubeLength = 50;
 color = '#ff8d4b';
 function resizeCanvas() {
-    canvas.width = window.innerWidth + 100;
-    canvas.height = window.innerHeight + 200;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 function mouseMove(event) {
@@ -39,7 +39,8 @@ function mouseLeave() {
 function mouseEnter() {
     inCanvas = true;
 }
-function calculateLocation() {
+function calculateLocation(wobble) {
+
     if (inCanvas == true) {
         var dx = mousePositionx - cubeX;
         var dy = mousePositiony - cubeY;
@@ -105,11 +106,11 @@ function shadeColor(color, percent) {
 function draw(){
 
   // clear the canvas
-  ctx.clearRect(-100, -100, canvas.width, canvas.height);
+  ctx.clearRect(-100, -100, canvas.width+200, canvas.height+200);
   
   // Wobble the cube using a sine wave
   var wobble = Math.sin(Date.now()/250)*window.innerHeight/50;
-  calculateLocation();
+  calculateLocation(wobble);
   
   // draw the cube
   drawCube(
