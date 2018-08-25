@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 html, body {
     overflow: hidden;
 }
@@ -21,8 +21,9 @@ html, body {
 h1 {
     margin-top: 20%;
     text-align: center;
-    font-family: 'Roboto', mono;
-    font-size: 100px;
+    font-family: 'Roboto Mono';
+    font-size: 70px;
+    font-weight: bold;
 }
 
 #sub {
@@ -58,7 +59,7 @@ span {
 
 .box {
     text-align: center;
-    font-family: 'Roboto', mono;
+    font-family: 'Roboto Mono';
     font-size: 40px;
     margin: 5%;
     background-clip: text;

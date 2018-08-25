@@ -15,8 +15,8 @@ var mousePositiony;
 var inCanvas = true;
 var xVelocity = 0.1;
 var yVelocity = 0.1;
-var speed = 2.5
-var angle = 45
+var speed = 3;
+var angle = 45;
 
 cubeX = 80;
 cubeY = 110;

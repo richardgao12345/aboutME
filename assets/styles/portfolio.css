@@ -1,31 +1,26 @@
 ---
 ---
 
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 
-h2 {
+h1 {
     text-align: center;
     top: 20%;
     width: 40%;
-    font: Courier;
+    font-family: 'Roboto Mono';
+    font-size: 90px;
     position: absolute;
-    font-size: 80px;
-    color: rgb(70, 64, 64);
-    margin-bottom: 0;
-    margin: 0;
-    padding: 0%;
-}
-h2#div {
-    margin: 0px;
-    padding: 0px;
-    line-height: 0;
-    height: 100%;
-    display: inline;
-    box-sizing: content-box;
+    color: black;
+
 }
 
+.header {
+    display: flex;
+    flex-direction: vertical;
+}
 .links {
     display: block;
+    margin: 20px;
 }
 
 img {
