@@ -11,15 +11,27 @@
     </head>
     <body>
         <div class="header">
-            <div class="links">
+            <li class="item first" >
+                <div class="textlink" id="home" onClick="linkClick(this.id)">
+                    Back To Home
+                </div>
+            </li>
+            <li class="item">
                 <img src="{{ site.url }}/assets/images/githublogo.png" id="github" onClick="linkClick(this.id)">
-            </div>
-            <div class="links">
+                <span class="textlink"id="github" onClick="linkClick(this.id)">
+                    Github
+                </span>
+            </li>
+            <li class="item">
                 <img src="{{ site.url }}/assets/images/linkedinlogo.png" id="linkedin" onClick="linkClick(this.id)">
-            </div>
-            <div class="links">
+                <span class="textlink" id="linkedin" onClick="linkClick(this.id)">
+                    LinkedIn
+                </span>
+            </li>
+            <li class="item">
                 <img src="{{ site.url }}/assets/images/maillogo.png" id="mail" onClick="linkClick(this.id)">
-            </div>
+                <span class="textlink" id="mail" onClick="linkClick(this.id)"> Mail </span>
+            </li>
         </div>
         <h1 class="header"> Portfolio
         </h1>

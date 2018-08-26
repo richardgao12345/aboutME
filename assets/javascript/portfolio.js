@@ -9,5 +9,8 @@ function linkClick(someID) {
         case "github":
             window.location.href = "//www.github.com/richardgao12345";
             break;
+        case "home":
+            window.location.href = "//richardgao12345.github.io/aboutMe";
+            break;
     }
 }
